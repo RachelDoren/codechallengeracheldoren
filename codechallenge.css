@@ -3,6 +3,10 @@ ul li:hover {
     background: #ddd;
 }
 
+body div.header > h2 {
+    color: white;
+}
+
 .header {
     background-color: #20b5cc;
     padding: 30px 40px;
