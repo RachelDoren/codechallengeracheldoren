@@ -1,0 +1,73 @@
+ul li:hover {
+    background: #ddd;
+}
+
+.header {
+    background-color: #20b5cc;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+input {
+    border: none;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.addBtn:hover {
+    background-color: #bbb;
+}
+
+
+.larger {
+  position: relative;
+  height: 18px;
+
+}
+
+
+th {
+  font-size: 14pt;
+}
+
+td {
+  font-size: 12pt;
+
+}
+
+#myInput {
+  font-size: 12pt;
+
+}
+
+.table>tbody>tr>td {
+    padding: 8px;
+    line-height: 40px !important;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+
