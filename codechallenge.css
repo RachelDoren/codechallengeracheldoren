@@ -1,3 +1,4 @@
+/* Darker hover */
 ul li:hover {
     background: #ddd;
 }
@@ -5,10 +6,12 @@ ul li:hover {
 .header {
     background-color: #20b5cc;
     padding: 30px 40px;
-    color: white;
     text-align: center;
 }
 
+
+
+/* Clear floats after header */
 .header:after {
     content: "";
     display: table;
