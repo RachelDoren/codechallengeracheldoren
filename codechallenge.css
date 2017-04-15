@@ -55,6 +55,9 @@ input {
 
 }
 
+td > div.checkbox {
+    text-align: center;
+}
 
 th {
   font-size: 14pt;
