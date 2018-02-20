@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="scripts.js"></script>
 </head>
   
   <body>
@@ -15,7 +16,7 @@
     
   <!--TEXT INPUT-->
     <div class="container">
-  <div id="myDIV" class="header">
+  <div id="myDIV" class="header" class ="add-items">
   <h2>My To Do List</h2>
   <input type="text" id="myInput" placeholder="To Do Item...">
   <span onclick="newElement()" class="addBtn">Add</span>
@@ -25,7 +26,7 @@
       
 <br>
   <br>
-  <table class="table">
+  <table class="table tasks">
     <thead>
       <tr>
         <th>Name</th>
