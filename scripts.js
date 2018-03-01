@@ -10,9 +10,6 @@ window.onload=function(){ //Wait for DOM to load before loading scripts
 
     const options = document.getElementsByClassName(".option");
 
-//EVENT LISTENERS
-addTasks.addEventListener("submit", addTask);
-
 //FUNCTIONS
 function addTask(e) {
     e.preventDefault();
@@ -96,7 +93,7 @@ uncheckAll.addEventListener("click", changingAll);
 checkAll.addEventListener("click", changingAll);
 deleteAll.addEventListener("click", changingAll);
 
-options.addEventListener("click", saveOption)
+options.addEventListener("click", saveOption);
 
 }
 
