@@ -8,9 +8,10 @@ window.onload=function(){ //Wait for DOM to load before loading scripts
     const checkAll = document.getElementsByClassName(".checkAll");
     const deleteAll = document.getElementsByClassName(".deleteAll");
 
+    const options = document.getElementsByClassName(".option");
+
 //EVENT LISTENERS
 addTasks.addEventListener("submit", addTask);
-
 
 //FUNCTIONS
 function addTask(e) {
@@ -40,18 +41,18 @@ function populateVisualList(todos = [], todoList) {
         <td><div class="form-group"> 
     <div class="col-md-6 selectContainer">
     <div class="input-group">
-    <select name="topic" class="form-control selectpicker" >
+    <select name="topic" class="form-control selectpicker optionList" >
       <option value=" " >Choose Topic</option>
-          <option>Exercise</option>
-          <option>Education</option>
-          <option>Hobby</option>
-          <option>Family</option>
-          <option>Pets</option>
-          <option>Cleaning</option>
-          <option>Career</option>
-          <option>Recreational</option>
-          <option>Health</option>
-          <option>Other</option>
+          <option class="option">Exercise</option>
+          <option class="option">Education</option>
+          <option class="option">Hobby</option>
+          <option class="option">Family</option>
+          <option class="option">Pets</option>
+          <option class="option">Cleaning</option>
+          <option class="option">Career</option>
+          <option class="option">Recreational</option>
+          <option class="option">Health</option>
+          <option class="option">Other</option>
          </select>
      </div>
     </div>
@@ -80,7 +81,11 @@ function changingAll(e) {
     const le = e.target;
     //check all
     //delete all
+    //FINISH!
+}
 
+function saveOption(e) {
+    console.log(e);
 }
 
 addTasks.addEventListener("submit", addTask);
@@ -91,9 +96,12 @@ uncheckAll.addEventListener("click", changingAll);
 checkAll.addEventListener("click", changingAll);
 deleteAll.addEventListener("click", changingAll);
 
+options.addEventListener("click", saveOption)
+
 }
 
 
+// FUNCTION MODEL FOR changingAll
 //     function science()
 //     {
 //         var c1 = document.getElementById('c1'), // Checkbox 1
