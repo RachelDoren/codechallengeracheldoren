@@ -29,10 +29,34 @@ function addTask(e) {
 function populateVisualList(todos = [], todoList) {
     todoList.innerHTML = todos.map((todo, i) => {
         return `
-        <li>
-            <input type="checkbox" data-index=${i} id="item${i}" ${todo.done ? "checked" : ""}/>
-            <label for="item${i}">${todo.text}</label>
-        </li>
+      </tr>
+        <tr>
+        <td> 
+        <input type="checkbox" data-index=${i} id="item${i}" ${todo.done ? "checked" : ""}/>
+        </td>
+        <td>
+        <label for="item${i}">${todo.text}</label>
+        </td>
+        <td><div class="form-group"> 
+    <div class="col-md-6 selectContainer">
+    <div class="input-group">
+    <select name="topic" class="form-control selectpicker" >
+      <option value=" " >Choose Topic</option>
+          <option>Exercise</option>
+          <option >Learning/Self Improvement</option>
+          <option >Hobby</option>
+          <option >Health</option>
+          <option >Family Time</option>
+          <option >Pets</option>
+          <option >Cleaning</option>
+          <option >Freelance Work</option>
+          <option>Recreational</option>
+          <option >Doctor's Appointments</option>
+          <option>Other Appointments</option>
+         </select>
+     </div>
+    </div>
+  </td>
         `;
     }).join("");
 
