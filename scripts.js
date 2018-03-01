@@ -43,16 +43,15 @@ function populateVisualList(todos = [], todoList) {
     <select name="topic" class="form-control selectpicker" >
       <option value=" " >Choose Topic</option>
           <option>Exercise</option>
-          <option >Learning/Self Improvement</option>
-          <option >Hobby</option>
-          <option >Health</option>
-          <option >Family Time</option>
-          <option >Pets</option>
-          <option >Cleaning</option>
-          <option >Freelance Work</option>
+          <option>Education</option>
+          <option>Hobby</option>
+          <option>Family</option>
+          <option>Pets</option>
+          <option>Cleaning</option>
+          <option>Career</option>
           <option>Recreational</option>
-          <option >Doctor's Appointments</option>
-          <option>Other Appointments</option>
+          <option>Health</option>
+          <option>Other</option>
          </select>
      </div>
     </div>
@@ -79,7 +78,6 @@ function changingAll(e) {
     //uncheck all
     console.log(e.target);
     const le = e.target;
-
     //check all
     //delete all
 
