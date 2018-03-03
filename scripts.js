@@ -3,12 +3,9 @@ window.onload=function(){ //Wait for DOM to load before loading scripts
     const addTasks = document.querySelector(".add-tasks");
     const taskList = document.querySelector(".tasks");
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
-    const uncheckAll = document.getElementsByClassName(".uncheckAll");
-    const checkAll = document.getElementsByClassName(".checkAll");
-    const deleteAll = document.getElementsByClassName(".deleteAll");
-
-    const options = document.getElementsByClassName(".option");
+    const uncheckAll = document.getElementById("uncheckAll");
+    const checkAll = document.getElementById("checkAll");
+    const deleteAll = document.getElementById("deleteAll");
 
 //FUNCTIONS
 function addTask(e) {
@@ -64,58 +61,37 @@ function isDone(e) {
     if(!e.target.matches("input")) return;
     const el = e.target;
     const index = el.dataset.index;
-    tasks[index].done = !tasks[index].done;
     localStorage.setItem("tasks", JSON.stringify(tasks));
     populateVisualList(tasks, taskList);
-
 }
 
-function changingAll(e) {
-    e.preventDefault();
-    if(!e.target.matches("input")) return;
-    //uncheck all
-    console.log(e.target);
-    const le = e.target;
-    //check all
-    //delete all
-    //FINISH!
-}
+function uncheckingAll(e) {
+    var getInputs = document.getElementsByTagName("input");
+    for (var i = 0, max = getInputs.length; i < max; i++)
+        { if (getInputs[i].type === 'checkbox') 
+    getInputs[i].checked = false; 
+}} 
 
-function saveOption(e) {
-    console.log(e);
-}
+function checkingAll(e) {
+    var getInputs = document.getElementsByTagName("input");
+    for (var i = 0, max = getInputs.length; i < max; i++)
+        { if (getInputs[i].type === 'checkbox') 
+    getInputs[i].checked = true;   
+}} 
+
+
+// function deletingAll(e) {
+
+//     localStorage.removeItem("tasks", JSON.stringify(tasks));
+// }
+
 
 addTasks.addEventListener("submit", addTask);
 taskList.addEventListener("click", isDone);
 populateVisualList(tasks, taskList);
 
-uncheckAll.addEventListener("click", changingAll);
-checkAll.addEventListener("click", changingAll);
-deleteAll.addEventListener("click", changingAll);
-
-options.addEventListener("click", saveOption);
+uncheckAll.addEventListener("click", uncheckingAll);
+checkAll.addEventListener("click", checkingAll);
+// deleteAll.addEventListener("click", deletingAll);
 
 }
-
-
-// FUNCTION MODEL FOR changingAll
-//     function science()
-//     {
-//         var c1 = document.getElementById('c1'), // Checkbox 1
-//             c2 = document.getElementById('c2'), // Checkbox 2
-//             c3 = document.getElementById('c3'), // Checkbox 3
-//             total = 0; // Our starting total
-             
-//         if (c1.checked) total += c1.value; // If checked, add c1 value
-//         if (c2.checked) total += c2.value; // If checked, add c2 value
-//         if (c3.checked) total += c3.value; // If checked, add c3 value
-         
-//         alert(total); // Alert total
-//     }
-// </script>
-
-
-// <input type="checkbox" id="c1" value="50"/>
-// <input type="checkbox" id="c2" value="50"/>
-// <input type="checkbox" id="c3" value="50"/>
-// <input type="button" onclick="science()"/>

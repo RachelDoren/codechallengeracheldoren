@@ -44,7 +44,7 @@ input {
     transition: 0.3s;
 }
 
-.uncheckAll {
+#uncheckAll {
     padding: 10px;
     background: #4286f4;
     color: #555;
@@ -55,7 +55,7 @@ input {
     width: 15%;
 }
 
-.checkAll {
+#checkAll {
     padding: 10px;
     background: #60c153;
     color: #555;
@@ -67,7 +67,7 @@ input {
 
 }
 
-.deleteAll {
+#deleteAll {
     padding: 10px;
     background: #c15353;
     color: #555;
