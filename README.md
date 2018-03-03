@@ -1,8 +1,6 @@
-# codechallengeracheldoren
+# 
 
-Included is the HTML/CSS structure of a TO-DO list.
+Included is a to-do list.
 
-I would add more interactivity by greying out the task when it is complete and ordering the list by date.
-
-I would also include the ability to filter by Name, date, task and complete/incomplete
-
+You can add tasks as you wish, delete all tasks, check or uncheck all tasks and classify them into categories. 
+You can also come back to the list you have made whenever because this relies on your browser's local storage. Once you clear your local storage, you will lose your to-do list data.
