@@ -61,6 +61,7 @@ function isDone(e) {
     if(!e.target.matches("input")) return;
     const el = e.target;
     const index = el.dataset.index;
+    tasks[index].done = !tasks[index].done;
     localStorage.setItem("tasks", JSON.stringify(tasks));
     populateVisualList(tasks, taskList);
 }
