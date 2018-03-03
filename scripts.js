@@ -1,4 +1,3 @@
-window.onload=function(){ //Wait for DOM to load before loading scripts
 //OBJECTS
     const addTasks = document.querySelector(".add-tasks");
     const taskList = document.querySelector(".tasks");
@@ -94,5 +93,3 @@ populateVisualList(tasks, taskList);
 uncheckAll.addEventListener("click", uncheckingAll);
 checkAll.addEventListener("click", checkingAll);
 // deleteAll.addEventListener("click", deletingAll);
-
-}
