@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Rachel Doren's Code Challenge</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Task Manager</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-    
-  <!--TEXT INPUT-->
-<div class="container">
-  <div id="myDIV" class="header" class ="add-items">
-  <h2>TO DO LIST</h2>
-    <form class="add-tasks">
-        <input type="text" name="task" placeholder="Task Name" required>
-        <input type="submit" value="Add task" class="col-md-2 addBtn">
-    </form>
-    <br>
-    <input type="button" value="Uncheck all" class="col-md-2" id ="uncheckAll">
-    <input type="button" value="Check all" class="col-md-2" id ="checkAll">
-    <input type="button" value="Delete All" class="col-md-2" id ="deleteAll">
 
-</div>
-  <br>
-  <br>
-  <table class="table tasks">
+    <!--TEXT INPUT-->
+    <div class="container">
+        <div id="myDIV" class="header" class="add-items">
+            <h2>Task Manager</h2>
+            <form class="add-tasks">
+                <input type="text" name="task" placeholder="Task Name" required>
+                <input type="submit" value="Add task" class="col-md-2 addBtn">
+            </form>
+            <br>
+            <input type="button" value="Uncheck all" class="col-md-2" id="uncheckAll">
+            <input type="button" value="Check all" class="col-md-2" id="checkAll">
+            <input type="button" value="Delete All" class="col-md-2" id="deleteAll">
 
-  <script src="scripts.js"></script>
+        </div>
+        <br>
+        <br>
+        <table class="table tasks">
 
-  
+            <script src="scripts.js"></script>
+
 </body>
+
 </html>

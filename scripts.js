@@ -1,10 +1,10 @@
 //OBJECTS
-    const addTasks = document.querySelector(".add-tasks");
-    const taskList = document.querySelector(".tasks");
-    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    const uncheckAll = document.getElementById("uncheckAll");
-    const checkAll = document.getElementById("checkAll");
-    const deleteAll = document.getElementById("deleteAll");
+const addTasks = document.querySelector(".add-tasks");
+const taskList = document.querySelector(".tasks");
+const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+const uncheckAll = document.getElementById("uncheckAll");
+const checkAll = document.getElementById("checkAll");
+const deleteAll = document.getElementById("deleteAll");
 
 //FUNCTIONS
 function addTask(e) {
@@ -15,7 +15,7 @@ function addTask(e) {
         done: false
     };
     tasks.push(item);
-    populateVisualList(tasks,taskList);
+    populateVisualList(tasks, taskList);
     localStorage.setItem("tasks", JSON.stringify(tasks));
     this.reset();
 }
@@ -57,7 +57,7 @@ function populateVisualList(todos = [], todoList) {
 
 function isDone(e) {
     //skip this unless it is an input type
-    if(!e.target.matches("input")) return;
+    if (!e.target.matches("input")) return;
     const el = e.target;
     const index = el.dataset.index;
     tasks[index].done = !tasks[index].done;
@@ -67,17 +67,19 @@ function isDone(e) {
 
 function uncheckingAll(e) {
     var getInputs = document.getElementsByTagName("input");
-    for (var i = 0, max = getInputs.length; i < max; i++)
-        { if (getInputs[i].type === 'checkbox') 
-    getInputs[i].checked = false; 
-}} 
+    for (var i = 0, max = getInputs.length; i < max; i++) {
+        if (getInputs[i].type === 'checkbox')
+            getInputs[i].checked = false;
+    }
+}
 
 function checkingAll(e) {
     var getInputs = document.getElementsByTagName("input");
-    for (var i = 0, max = getInputs.length; i < max; i++)
-        { if (getInputs[i].type === 'checkbox') 
-    getInputs[i].checked = true;   
-}} 
+    for (var i = 0, max = getInputs.length; i < max; i++) {
+        if (getInputs[i].type === 'checkbox')
+            getInputs[i].checked = true;
+    }
+}
 
 
 // function deletingAll(e) {
