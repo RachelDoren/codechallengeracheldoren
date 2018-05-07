@@ -7,6 +7,7 @@ const checkAll = document.getElementById("checkAll");
 const deleteAll = document.getElementById("deleteAll");
 
 //FUNCTIONS
+//Adds task data to local storage
 function addTask(e) {
     e.preventDefault();
     const text = (this.querySelector("[name=task]")).value;
@@ -20,39 +21,20 @@ function addTask(e) {
     this.reset();
 }
 
+//Populates list 
 function populateVisualList(todos = [], todoList) {
     todoList.innerHTML = todos.map((todo, i) => {
         return `
       </tr>
         <tr>
         <td> 
-        <input type="checkbox" data-index=${i} id="item${i}" ${todo.done ? "checked" : ""}/>
-        </td>
-        <td>
         <label for="item${i}">${todo.text}</label>
         </td>
-        <td><div class="form-group"> 
-    <div class="col-md-6 selectContainer">
-    <div class="input-group">
-    <select name="topic" class="form-control selectpicker optionList" >
-      <option value=" " >Choose Topic</option>
-          <option class="option">Exercise</option>
-          <option class="option">Education</option>
-          <option class="option">Hobby</option>
-          <option class="option">Family</option>
-          <option class="option">Pets</option>
-          <option class="option">Cleaning</option>
-          <option class="option">Career</option>
-          <option class="option">Recreational</option>
-          <option class="option">Health</option>
-          <option class="option">Other</option>
-         </select>
-     </div>
-    </div>
-  </td>
+        <td>
+        <input type="checkbox" data-index=${i} id="item${i}" ${todo.done ? "checked" : ""}/>
+        </td>
         `;
     }).join("");
-
 }
 
 function isDone(e) {
@@ -68,19 +50,20 @@ function isDone(e) {
 function uncheckingAll(e) {
     var getInputs = document.getElementsByTagName("input");
     for (var i = 0, max = getInputs.length; i < max; i++) {
-        if (getInputs[i].type === 'checkbox')
+        if (getInputs[i].type === 'checkbox') {
             getInputs[i].checked = false;
+          }
     }
 }
 
 function checkingAll(e) {
     var getInputs = document.getElementsByTagName("input");
     for (var i = 0, max = getInputs.length; i < max; i++) {
-        if (getInputs[i].type === 'checkbox')
+        if (getInputs[i].type === 'checkbox') {
             getInputs[i].checked = true;
+          }
     }
 }
-
 
 // function deletingAll(e) {
 
