@@ -13,15 +13,12 @@ body div.header > h2 {
     text-align: center;
 }
 
-
-
 /* Clear floats after header */
 .header:after {
     content: "";
     display: table;
     clear: both;
 }
-
 
 input {
     border: none;
@@ -37,7 +34,6 @@ input {
     width: 25%;
     background: #d9d9d9;
     color: #555;
-    float: left;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
@@ -64,7 +60,6 @@ input {
     cursor: pointer;
     transition: 0.3s;
     width: 15%;
-
 }
 
 #deleteAll {
@@ -76,7 +71,6 @@ input {
     cursor: pointer;
     transition: 0.3s;
     width: 15%;
-
 }
 
 .addBtn:hover {
@@ -87,7 +81,6 @@ input {
 .larger {
   position: relative;
   height: 18px;
-
 }
 
 td > div.checkbox {
@@ -100,12 +93,11 @@ th {
 
 td {
   font-size: 12pt;
-
+  align: justify;
 }
 
 #myInput {
   font-size: 12pt;
-
 }
 
 .table>tbody>tr>td {
@@ -113,4 +105,3 @@ td {
     vertical-align: top;
     border-top: 1px solid #ddd;
 }
-
